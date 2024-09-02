@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+     <!-- link to shortcut icon -->
+     <link rel="shortcut icon" href="icons8-strawberry-48.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" class="flex-column">
+        <div class="modal flex-column"  data-modal></div>
+        <div class="overlay flex-column" id="overlay">
+            <div class="credit flex-column">
+                <h2>Deposit Credit</h2>
+                <p>For you to begin or continue playing enter an amount. Thank you!</p>
+                <input type="number" inputmode="numeric" id="input-amount" placeholder="0000" required>
+                <div class="credit-btn flex-column">
+                    <input type="submit" value="Cancel" id="cancel-btn">
+                    <input type="submit" value="Done" id="submit-btn">
+                </div>
+            </div>
+            <div class="widthrawal-pg flex-column closed">
+                <p class="confirmation-msg"></p>
+                <h2>Withdrawal Amount</h2>
+                <p>Enter the amount to withdraw from this account. Thank you!</p>
+                <input type="number" inputmode="numeric" id="withdraw-amount"  placeholder="0000" required>
+                <div class="credit-btn flex-column">
+                    <input type="submit" value="Cancel" id="wdrw-cancel-btn">
+                    <input type="submit" value="Done" id="wdrw-btn">
+                </div>
+            </div>
+           
+        </div>
+        <div id="digit" class="flex-column">
+            <h3 id="dep">Deposit</h3>
+            <h3 id="wdrw">Withdraw</h3>            
+        </div>
+        <div class="history flex-column"><img src="assets/icons8-hour-24.png" alt=""></div>
+        <div class="help flex-column"><img src="assets/icons8-exclamation-mark-24.png" alt=""></div>
+        <div class="position-abs closed">
+            <div class="message flex-column"><h3>Add more credit to continue</h3></div>
+        </div>
+
+        <div class="randNum-cont">
+            <div ><img src="assets/img-1.jpg" id="num1" class="fruit-img"></div>
+            <div ><img src="assets/img-2.jpg" id="num2" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-3.jpg" id="num3" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-4.jpg" id="num4" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-5.jpg" id="num5" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-7.jpg" id="num6" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-8.jpg" id="num7" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-9.jpg" id="num8" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-6.jpg" id="num9" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-7.jpg" id="num10" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-6.jpg" id="num11" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-5.jpg" id="num12" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-2.jpg" id="num13" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-1.jpg" id="num14" class="fruit-img" alt=""></div>
+            <div ><img src="assets/img-4.jpg" id="num15" class="fruit-img" alt=""></div>
+        </div>
+
+        <div class="controls flex-column">
+            <button class="btn" id="auto-btn">Auto</button>            
+            <div><h3>Balance:</h3> <input type="number" placeholder="0" id="balance" value=0 disabled></div>
+            <!-- <button id="Add">Add</button> -->
+            <div><h3>Stake:</h3> <input type="number" placeholder="00" id="stake"></div>
+            <div><h3>Win:</h3> <input type="number" placeholder="0" id="win" value=0 disabled></div>
+            <button id="start-btn">Start</button>
+        </div>
+        
+        
+    </div>
+    <audio id="sound" src="assets/audiomass-output.mp3" preload="auto"></audio>
+    <audio id="sound-win" src="assets/win-audio.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
